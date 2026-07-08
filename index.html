@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SE.AR.L. S.R.L.S — Impresa edile a Roma specializzata in ristrutturazioni e costruzioni edili residenziali e commerciali." />
+  <title>SE.AR.L. S.R.L.S — Costruzioni & Ristrutturazioni Roma</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Bebas Neue"','sans-serif'],body:['"DM Sans"','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    /* ── Hero ── */
+    .hero-section {
+      min-height: 100vh; position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, var(--c-darker) 0%, #252b35 100%);
+    }
+    .hero-bg {
+      position: absolute; inset: 0; object-fit: cover; width: 100%; height: 100%;
+      opacity: 0.18; mix-blend-mode: luminosity;
+    }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg, rgba(20,24,32,0.95) 40%, rgba(20,24,32,0.5) 100%);
+    }
+    .hero-accent-line {
+      display: block; width: 56px; height: 4px;
+      background: var(--c-amber); margin-bottom: 24px;
+    }
+    .hero-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.95; letter-spacing: 0.04em; color: #fff;
+    }
+    .hero-title span { color: var(--c-amber-l); }
+    .hero-number { font-family: 'Bebas Neue', sans-serif; font-size: 2.8rem; letter-spacing: 0.04em; color: #fff; line-height: 1; }
+
+    /* ── Servizi ── */
+    .service-card {
+      padding: 32px; border-left: 3px solid var(--c-amber);
+      background: #fff; border-radius: 0 4px 4px 0;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .service-card:hover { transform: translateX(6px); box-shadow: 6px 8px 32px rgba(0,0,0,0.08); }
+    .service-num {
+      font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem;
+      color: rgba(217,119,6,0.15); line-height: 1; margin-bottom: 8px;
+    }
+
+    /* ── Come lavoriamo ── */
+    .step-card { position: relative; padding: 28px; }
+    .step-card::before {
+      content: attr(data-step);
+      position: absolute; top: 0; right: 16px;
+      font-family: 'Bebas Neue', sans-serif; font-size: 5rem;
+      color: rgba(217,119,6,0.08); line-height: 1; pointer-events: none;
+    }
+    .step-icon {
+      width: 48px; height: 48px; background: var(--c-amber);
+      border-radius: 4px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px;
+    }
+
+    /* ── Testimonianze ── */
+    .testimonial-card {
+      background: #fff; border-radius: 4px; padding: 28px;
+      border: 1px solid var(--c-border); position: relative;
+    }
+    .testimonial-card::before {
+      content: '"'; position: absolute; top: 12px; left: 20px;
+      font-family: 'Bebas Neue', sans-serif; font-size: 5rem;
+      color: var(--c-amber); opacity: 0.2; line-height: 1;
+    }
+
+    /* ── Area geografica ── */
+    .zone-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--c-sand-d); border: 1px solid var(--c-border);
+      padding: 6px 14px; border-radius: 2px;
+      font-size: 0.78rem; font-weight: 600; color: var(--c-muted); letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body class="font-body">
+  <div id="navbar-placeholder"></div>
+
+  <!-- Barra navigazione contestuale -->
+  <div class="subnav">
+    <span style="font-size:0.72rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.3);">SE.AR.L. S.R.L.S — Roma</span>
+    <div class="subnav-links">
+      <a href="index.html" class="subnav-link active-sub">Home</a>
+      <div class="subnav-sep"></div>
+      <a href="galleria.html" class="subnav-link">Lavori</a>
+      <div class="subnav-sep"></div>
+      <a href="contatti.html" class="subnav-link">Contatti</a>
+      <div class="subnav-sep"></div>
+      <a href="contatti.html" class="subnav-link" style="color:var(--c-amber);">Preventivo</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero-section px-6 lg:px-12 pt-24">
+      <img
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80"
+        alt="Cantiere edile SE.AR.L. Roma" class="hero-bg" />
+      <div class="hero-overlay"></div>
+
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="max-w-2xl">
+          <span class="hero-accent-line"></span>
+          <div class="section-label mb-6" style="color:var(--c-amber);">
+            Impresa Edile — Roma
+          </div>
+          <h1 class="hero-title mb-6">
+            Costruiamo.<br />
+            Ristrutturiamo.<br />
+            <span>Garantiamo.</span>
+          </h1>
+          <p style="color:rgba(255,255,255,0.6); font-size:1.05rem; line-height:1.75; max-width:480px; margin-bottom:40px;">
+            SE.AR.L. S.R.L.S opera nel settore edile a Roma e provincia. 
+            Ristrutturazioni complete, nuove costruzioni e finiture di qualità 
+            per privati e aziende.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="contatti.html" class="btn-primary">
+              Richiedi Preventivo Gratuito
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="galleria.html" class="btn-outline-white">Vedi i Nostri Lavori</a>
+          </div>
+        </div>
+
+        <!-- Numeri -->
+        <div class="flex flex-wrap gap-10 mt-20 pt-10" style="border-top:1px solid rgba(255,255,255,0.1);">
+          <div>
+            <div class="hero-number">15+</div>
+            <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:4px; font-weight:600;">Anni di Attività</div>
+          </div>
+          <div>
+            <div class="hero-number">200+</div>
+            <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:4px; font-weight:600;">Cantieri Completati</div>
+          </div>
+          <div>
+            <div class="hero-number">100%</div>
+            <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:4px; font-weight:600;">Lavori Garantiti</div>
+          </div>
+          <div>
+            <div class="hero-number">Roma</div>
+            <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-top:4px; font-weight:600;">& Provincia</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVIZI ═══════════ -->
+    <section class="py-28 px-6 lg:px-12" style="background:var(--c-sand);">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-20 items-start">
+          <div data-reveal>
+            <div class="section-label mb-4">Cosa Facciamo</div>
+            <h2 class="section-title mb-6">Edilizia residenziale e commerciale.</h2>
+            <p style="color:var(--c-muted); line-height:1.8; margin-bottom:24px;">
+              Dalla piccola ristrutturazione al cantiere su larga scala, 
+              SE.AR.L. gestisce ogni fase del lavoro con personale qualificato, 
+              materiali certificati e rispetto rigoroso dei tempi concordati.
+            </p>
+            <p style="color:var(--c-muted); line-height:1.8; margin-bottom:32px;">
+              Operiamo su Roma e tutta la provincia con squadre specializzate 
+              per ogni tipologia di intervento: dal rustico alle finiture, 
+              dagli impianti all'efficienza energetica.
+            </p>
+            <a href="contatti.html" class="btn-primary">Parlaci del Tuo Progetto</a>
+          </div>
+
+          <div class="flex flex-col gap-4" data-reveal>
+            <div class="service-card">
+              <div class="service-num">01</div>
+              <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:8px;">Ristrutturazioni Residenziali</h3>
+              <p style="font-size:0.875rem; color:var(--c-muted); line-height:1.7;">Appartamenti, ville, attici. Ristrutturazioni complete o parziali: impianti idraulici ed elettrici, pavimenti, bagni, cucine, infissi e tinteggiature.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-num">02</div>
+              <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:8px;">Nuove Costruzioni</h3>
+              <p style="font-size:0.875rem; color:var(--c-muted); line-height:1.7;">Realizzazione di edifici abitativi e non abitativi: villini, capannoni, strutture commerciali. Gestione completa dalla fondamenta al collaudo.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-num">03</div>
+              <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:8px;">Opere Commerciali & Industriali</h3>
+              <p style="font-size:0.875rem; color:var(--c-muted); line-height:1.7;">Ristrutturazione di uffici, negozi, magazzini e capannoni. Interventi anche su edifici storici vincolati, con esperienza nelle pratiche comunali.</p>
+            </div>
+            <div class="service-card">
+              <div class="service-num">04</div>
+              <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:8px;">Facciate, Cappotto & Finiture</h3>
+              <p style="font-size:0.875rem; color:var(--c-muted); line-height:1.7;">Rifacimento facciate, isolamento termico a cappotto, intonaci, tinteggiature esterne e posa di qualsiasi tipologia di pavimento e rivestimento.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ULTIMI LAVORI ═══════════ -->
+    <section class="py-28 px-6 lg:px-12" style="background:#fff;">
+      <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+          <div data-reveal>
+            <div class="section-label mb-4">Portfolio</div>
+            <h2 class="section-title">Ultimi cantieri.</h2>
+          </div>
+          <a href="galleria.html" class="btn-secondary self-start sm:self-auto" data-reveal>
+            Tutti i lavori
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
+        </div>
+        <div id="home-lavori-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div class="text-center mt-12">
+          <a href="galleria.html" class="btn-primary">Esplora tutti i cantieri</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ COME LAVORIAMO ═══════════ -->
+    <section class="py-28 px-6 lg:px-12" style="background:var(--c-darker);">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16" data-reveal>
+          <div class="section-label mb-4" style="justify-content:center;">Come Operiamo</div>
+          <h2 class="section-title section-title-light">Dal sopralluogo alla consegna.</h2>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="step-card" data-step="01" data-reveal>
+            <div class="step-icon">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+            </div>
+            <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.04em; color:#fff; margin-bottom:10px;">Sopralluogo</h3>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.45); line-height:1.75;">Venite a vedere il luogo di lavoro, valutiamo insieme le necessità e raccogliamo tutte le informazioni. Gratuito e senza impegno.</p>
+          </div>
+          <div class="step-card" data-step="02" data-reveal>
+            <div class="step-icon">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.04em; color:#fff; margin-bottom:10px;">Preventivo</h3>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.45); line-height:1.75;">Entro 48 ore ricevete un preventivo dettagliato e trasparente: materiali, manodopera, tempistiche e costi precisi senza sorprese.</p>
+          </div>
+          <div class="step-card" data-step="03" data-reveal>
+            <div class="step-icon">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+            </div>
+            <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.04em; color:#fff; margin-bottom:10px;">Cantiere</h3>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.45); line-height:1.75;">Squadre specializzate al lavoro con aggiornamenti costanti al cliente. Rispettiamo i tempi concordati e manteniamo il cantiere in ordine.</p>
+          </div>
+          <div class="step-card" data-step="04" data-reveal>
+            <div class="step-icon">
+              <svg class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+            </div>
+            <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.3rem; letter-spacing:0.04em; color:#fff; margin-bottom:10px;">Consegna</h3>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.45); line-height:1.75;">Verifica finale insieme al cliente, consegna delle garanzie sui lavori svolti e documentazione completa per eventuale detrazioni fiscali.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ TESTIMONIANZE ═══════════ -->
+    <section class="py-28 px-6 lg:px-12" style="background:var(--c-sand);">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14" data-reveal>
+          <div class="section-label mb-4" style="justify-content:center;">Clienti</div>
+          <h2 class="section-title">Lo dicono i nostri clienti.</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="testimonial-card" data-reveal>
+            <div style="display:flex; gap:2px; margin-bottom:16px; padding-top:8px;">
+              <span style="color:var(--c-amber); font-size:1rem;">★★★★★</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--c-muted); line-height:1.75; margin-bottom:20px; font-style:italic;">
+              "Ristrutturazione completa di 90 m² completata in anticipo rispetto ai tempi previsti. 
+              Personale serio, puntuale e sempre disponibile. Il risultato ha superato le aspettative."
+            </p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:36px; height:36px; background:var(--c-amber); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; color:#fff; font-size:1rem;">M</div>
+              <div>
+                <div style="font-weight:700; font-size:0.85rem; color:var(--c-dark);">Marco T.</div>
+                <div style="font-size:0.75rem; color:var(--c-muted);">Parioli, Roma</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" data-reveal>
+            <div style="display:flex; gap:2px; margin-bottom:16px; padding-top:8px;">
+              <span style="color:var(--c-amber); font-size:1rem;">★★★★★</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--c-muted); line-height:1.75; margin-bottom:20px; font-style:italic;">
+              "Abbiamo affidato a SE.AR.L. la ristrutturazione dei nostri uffici a Roma centro. 
+              Lavori eseguiti senza interferire con l'attività lavorativa. Professionalità alta."
+            </p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:36px; height:36px; background:var(--c-amber); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; color:#fff; font-size:1rem;">L</div>
+              <div>
+                <div style="font-weight:700; font-size:0.85rem; color:var(--c-dark);">Laura B.</div>
+                <div style="font-size:0.75rem; color:var(--c-muted);">Centro Storico, Roma</div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card" data-reveal>
+            <div style="display:flex; gap:2px; margin-bottom:16px; padding-top:8px;">
+              <span style="color:var(--c-amber); font-size:1rem;">★★★★★</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--c-muted); line-height:1.75; margin-bottom:20px; font-style:italic;">
+              "Costruzione del garage interrato e sistemazione esterna del giardino. 
+              Preventivo chiaro, nessun costo aggiuntivo a sorpresa. Torneremo sicuramente."
+            </p>
+            <div style="display:flex; align-items:center; gap:10px;">
+              <div style="width:36px; height:36px; background:var(--c-amber); border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; color:#fff; font-size:1rem;">G</div>
+              <div>
+                <div style="font-weight:700; font-size:0.85rem; color:var(--c-dark);">Giovanni R.</div>
+                <div style="font-size:0.75rem; color:var(--c-muted);">EUR, Roma</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ ZONA OPERATIVA ═══════════ -->
+    <section class="py-20 px-6 lg:px-12" style="background:#fff;">
+      <div class="max-w-7xl mx-auto" data-reveal>
+        <div class="section-label mb-4">Area di Intervento</div>
+        <h2 class="section-title mb-8">Operiamo su Roma<br />e tutta la provincia.</h2>
+        <div class="flex flex-wrap gap-2">
+          <span class="zone-badge">Roma Centro</span><span class="zone-badge">Parioli</span>
+          <span class="zone-badge">EUR</span><span class="zone-badge">Prati</span>
+          <span class="zone-badge">Tuscolana</span><span class="zone-badge">Monteverde</span>
+          <span class="zone-badge">Ostia</span><span class="zone-badge">Garbatella</span>
+          <span class="zone-badge">Trastevere</span><span class="zone-badge">Nomentano</span>
+          <span class="zone-badge">Pomezia</span><span class="zone-badge">Ciampino</span>
+          <span class="zone-badge">Fiumicino</span><span class="zone-badge">Tivoli</span>
+          <span class="zone-badge">Castelli Romani</span><span class="zone-badge">Provincia di Roma</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CTA ═══════════ -->
+    <section class="py-24 px-6 lg:px-12" style="background:var(--c-amber);">
+      <div class="max-w-3xl mx-auto text-center" data-reveal>
+        <h2 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(2.5rem,6vw,4.5rem); letter-spacing:0.04em; color:#fff; line-height:1; margin-bottom:20px;">
+          Hai un progetto in mente?
+        </h2>
+        <p style="color:rgba(255,255,255,0.8); font-size:1.05rem; line-height:1.7; margin-bottom:36px;">
+          Contattaci oggi per un sopralluogo gratuito e un preventivo senza impegno. 
+          Rispondiamo entro 24 ore.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="contatti.html" style="background:#fff; color:var(--c-amber);" class="btn-primary">
+            Richiedi Preventivo Gratuito
+          </a>
+          <a href="galleria.html" style="border-color:rgba(255,255,255,0.6); color:#fff;" class="btn-outline-white">
+            Guarda i Lavori
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

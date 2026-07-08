@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contatta SE.AR.L. S.R.L.S per un preventivo gratuito. Impresa edile a Roma e provincia." />
+  <title>Contatti & Preventivo — SE.AR.L. S.R.L.S</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Bebas Neue"','sans-serif'],body:['"DM Sans"','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .contact-card {
+      background:#fff; border:1px solid var(--c-border); border-left:3px solid var(--c-amber);
+      border-radius:0 4px 4px 0; padding:24px; display:flex; gap:16px; align-items:flex-start;
+      transition:transform 0.2s, box-shadow 0.2s;
+    }
+    .contact-card:hover { transform:translateX(4px); box-shadow:4px 6px 24px rgba(0,0,0,0.06); }
+    .contact-icon {
+      width:42px; height:42px; border-radius:3px; flex-shrink:0;
+      background:#fef3c7; display:flex; align-items:center; justify-content:center;
+    }
+    .trust-badge {
+      display:flex; align-items:center; gap:8px;
+      background:#fef9ee; border:1px solid #fde68a; border-radius:3px;
+      padding:10px 16px; font-size:0.8rem; color:#92400e; font-weight:600;
+    }
+    .form-card {
+      background:#fff; border:1px solid var(--c-border); border-radius:4px;
+      padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.05);
+    }
+    .form-group { margin-bottom:20px; }
+    label {
+      display:block; font-size:0.72rem; font-weight:700; color:var(--c-dark);
+      margin-bottom:6px; letter-spacing:0.1em; text-transform:uppercase;
+    }
+    .form-input {
+      width:100%; padding:12px 16px; border:2px solid var(--c-border); border-radius:3px;
+      font-family:'DM Sans',sans-serif; font-size:0.9rem; color:var(--c-dark);
+      background:#fff; transition:border-color 0.2s, box-shadow 0.2s; outline:none; appearance:none;
+    }
+    .form-input:focus { border-color:var(--c-amber); box-shadow:0 0 0 3px rgba(217,119,6,0.1); }
+    .form-input::placeholder { color:#9ca3af; }
+    select.form-input {
+      cursor:pointer;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239ca3af'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+      background-repeat:no-repeat; background-position:right 12px center; background-size:18px; padding-right:40px;
+    }
+    textarea.form-input { resize:vertical; min-height:130px; }
+    .checkbox-label { display:flex; gap:10px; align-items:flex-start; cursor:pointer; }
+    .checkbox-label input { width:18px; height:18px; flex-shrink:0; margin-top:2px; accent-color:var(--c-amber); cursor:pointer; }
+    #form-feedback {
+      background:#fef9ee; border:1px solid #fde68a; color:#92400e;
+      padding:12px 16px; border-radius:3px; font-size:0.875rem; font-weight:500;
+    }
+    .orario-row { display:flex; justify-content:space-between; align-items:center; padding:10px 0; border-bottom:1px solid var(--c-sand-d); }
+    .orario-row:last-child { border-bottom:none; }
+    .map-placeholder {
+      height:180px; border-radius:4px;
+      background:linear-gradient(135deg, #fef9ee, #fef3c7);
+      border:1px solid #fde68a; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; gap:8px; color:#d97706;
+    }
+  </style>
+</head>
+<body class="font-body">
+  <div id="navbar-placeholder"></div>
+
+  <!-- Barra navigazione contestuale -->
+  <div class="subnav">
+    <a href="index.html" class="subnav-back">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Home
+    </a>
+    <div class="subnav-links">
+      <a href="index.html" class="subnav-link">Home</a>
+      <div class="subnav-sep"></div>
+      <a href="galleria.html" class="subnav-link">Lavori</a>
+      <div class="subnav-sep"></div>
+      <a href="contatti.html" class="subnav-link active-sub">Contatti</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero pt-28 pb-16 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="max-w-2xl">
+          <div class="section-label mb-4" style="color:var(--c-amber);">Contatti & Preventivi</div>
+          <h1 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,7vw,5.5rem); letter-spacing:0.04em; color:#fff; line-height:0.95; margin-bottom:20px;">
+            Parliamo del<br />tuo cantiere.
+          </h1>
+          <p style="color:rgba(255,255,255,0.5); font-size:1rem; line-height:1.75; max-width:440px;">
+            Sopralluogo gratuito, preventivo in 48 ore, nessun impegno. 
+            Chiamaci o compila il form: ti ricontattiamo subito.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATTI + FORM -->
+    <section class="py-20 px-6 lg:px-12" style="background:var(--c-sand);">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+          <!-- Colonna sinistra -->
+          <div class="lg:col-span-2 flex flex-col gap-5" data-reveal>
+            <div>
+              <div class="section-label mb-3">Come contattarci</div>
+              <h2 class="section-title mb-3" style="font-size:2rem;">Siamo a Roma,<br />sempre reperibili.</h2>
+              <p style="font-size:0.875rem; color:var(--c-muted); line-height:1.75;">
+                Puoi chiamarci, scriverci su WhatsApp o compilare il form. 
+                Rispondiamo entro la giornata lavorativa.
+              </p>
+            </div>
+
+            <!-- Trust -->
+            <div class="flex flex-col gap-2">
+              <div class="trust-badge">
+                <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Sopralluogo gratuito e senza impegno
+              </div>
+              <div class="trust-badge">
+                <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Preventivo dettagliato entro 48 ore
+              </div>
+              <div class="trust-badge">
+                <svg class="w-4 h-4 text-amber-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                Garanzia scritta su tutti i lavori
+              </div>
+            </div>
+
+            <!-- Card sede -->
+            <div class="contact-card">
+              <div class="contact-icon"><svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+              <div>
+                <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-muted); margin-bottom:4px;">Sede Operativa</div>
+                <!-- ← INSERISCI INDIRIZZO -->
+                <p style="font-weight:700; font-size:0.9rem; color:var(--c-dark);">Via Palombarese 542</p>
+                <p style="font-size:0.85rem; color:var(--c-muted);">Fonte Nuova (RM)</p>
+                <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">P.IVA: 16495271005</p>
+              </div>
+            </div>
+
+            <!-- Card telefono -->
+            <div class="contact-card">
+              <div class="contact-icon"><svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></div>
+              <div>
+                <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-muted); margin-bottom:4px;">Telefono & WhatsApp</div>
+                <!-- ← INSERISCI TELEFONO -->
+                <a href="tel:+393479544980" style="font-weight:700; font-size:0.9rem; color:var(--c-dark); text-decoration:none;">+39 3479544980</a>
+                <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">Lun–Sab, 8:00–18:00</p>
+              </div>
+            </div>
+
+            <!-- Card email -->
+            <div class="contact-card">
+              <div class="contact-icon"><svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div>
+              <div>
+                <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-muted); margin-bottom:4px;">Email</div>
+                <!-- ← INSERISCI EMAIL -->
+                <a href="artandaiu25@gmail.com" style="font-weight:700; font-size:0.9rem; color:var(--c-dark); text-decoration:none;">artandaiu25@gmail.com</a>
+                <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">Risposta entro 24h</p>
+              </div>
+            </div>
+
+            <!-- Orari -->
+            <div style="background:#fff; border-radius:4px; padding:24px; border:1px solid var(--c-border);">
+              <h4 style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:16px;">Orari di Disponibilità</h4>
+              <div class="orario-row"><span style="font-size:0.875rem; color:var(--c-muted);">Lunedì – Venerdì</span><span style="font-size:0.875rem; font-weight:700; color:var(--c-amber);">08:00 – 18:00</span></div>
+              <div class="orario-row"><span style="font-size:0.875rem; color:var(--c-muted);">Sabato</span><span style="font-size:0.875rem; font-weight:700; color:var(--c-amber);">08:00 – 13:00</span></div>
+              <div class="orario-row"><span style="font-size:0.875rem; color:var(--c-muted);">Domenica</span><span style="font-size:0.875rem; color:#9ca3af;">Chiuso</span></div>
+            </div>
+
+            <!-- Mappa placeholder -->
+            <div class="map-placeholder">
+              <svg class="w-8 h-8 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+              <span style="font-size:0.82rem; opacity:0.6;"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2965.5115907924605!2d12.658377577040373!3d41.98929497122979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f7a8c6e8c03ef%3A0x876da5b941850c4c!2sVia%20Palombarese%2C%20542%2C%2000013%20Santa%20Lucia%20RM!5e0!3m2!1sit!2sit!4v1783522012751!5m2!1sit!2sit" width="485" height="185" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></span>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <div class="lg:col-span-3" data-reveal>
+            <div class="form-card">
+              <div style="margin-bottom:32px;">
+                <h3 style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:8px;">Richiedi Preventivo</h3>
+                <p style="font-size:0.875rem; color:var(--c-muted);">Compila il form e ti ricontattiamo entro il giorno lavorativo successivo per fissare un sopralluogo.</p>
+              </div>
+
+              <!--
+                ENDPOINT FORM:
+                ─────────────────────────────────────────────────────────
+                OPZIONE 1 — Formspree (gratuito fino a 50 invii/mese):
+                  action="https://formspree.io/f/TUO_ID"
+                  Registrati su https://formspree.io
+
+                OPZIONE 2 — Web3Forms (gratuito, illimitato):
+                  action="https://api.web3forms.com/submit"
+                  + <input type="hidden" name="access_key" value="TUA_KEY">
+                  Registrati su https://web3forms.com
+
+                Dopo aver scelto l'endpoint, rimuovi e.preventDefault() in app.js
+                ─────────────────────────────────────────────────────────
+              -->
+              <form id="form-contatti" method="POST" action="" novalidate>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div class="form-group">
+                    <label for="nome">Nome e Cognome *</label>
+                    <input type="text" id="nome" name="nome" class="form-input" placeholder="Mario Rossi" required autocomplete="name" />
+                  </div>
+                  <div class="form-group">
+                    <label for="azienda">Azienda / Condominio</label>
+                    <input type="text" id="azienda" name="azienda" class="form-input" placeholder="Opzionale" />
+                  </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div class="form-group">
+                    <label for="telefono">Telefono *</label>
+                    <input type="tel" id="telefono" name="telefono" class="form-input" placeholder="+39 333 000 0000" required autocomplete="tel" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="mario@email.it" autocomplete="email" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="tipo-lavoro">Tipo di Lavoro *</label>
+                  <select id="tipo-lavoro" name="tipo_lavoro" class="form-input" required>
+                    <option value="" disabled selected>Seleziona il tipo di intervento…</option>
+                    <option value="ristrutturazione-residenziale">Ristrutturazione Residenziale</option>
+                    <option value="nuova-costruzione">Nuova Costruzione</option>
+                    <option value="ristrutturazione-commerciale">Ristrutturazione Commerciale/Uffici</option>
+                    <option value="facciate-cappotto">Facciate & Cappotto Termico</option>
+                    <option value="finiture">Finiture (Pavimenti, Bagno, Cucina)</option>
+                    <option value="capannone">Capannone / Struttura Industriale</option>
+                    <option value="altro">Altro</option>
+                  </select>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div class="form-group">
+                    <label for="superficie">Superficie Indicativa</label>
+                    <select id="superficie" name="superficie" class="form-input">
+                      <option value="" disabled selected>Seleziona…</option>
+                      <option value="<50">Meno di 50 m²</option>
+                      <option value="50-100">50 – 100 m²</option>
+                      <option value="100-200">100 – 200 m²</option>
+                      <option value="200-500">200 – 500 m²</option>
+                      <option value="500+">Oltre 500 m²</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="zona">Zona / Quartiere *</label>
+                    <input type="text" id="zona" name="zona" class="form-input" placeholder="Es. Parioli, EUR, Ostia…" required />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="messaggio">Descrivi il Lavoro *</label>
+                  <textarea id="messaggio" name="messaggio" class="form-input" placeholder="Descrivi brevemente il tipo di intervento, lo stato attuale dell'immobile e le tue necessità. Più dettagli ci dai, più preciso sarà il preventivo." required></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label for="come-trovato">Come ci hai trovato?</label>
+                  <select id="come-trovato" name="come_trovato" class="form-input">
+                    <option value="" disabled selected>Seleziona…</option>
+                    <option value="google">Google / Ricerca online</option>
+                    <option value="passaparola">Passaparola</option>
+                    <option value="social">Social media</option>
+                    <option value="cartello-cantiere">Cartello in cantiere</option>
+                    <option value="altro">Altro</option>
+                  </select>
+                </div>
+
+                <div class="form-group" style="margin-bottom:24px;">
+                  <label class="checkbox-label" style="font-size:0.8rem; color:var(--c-muted); text-transform:none; letter-spacing:0; font-weight:400;">
+                    <input type="checkbox" name="privacy" required />
+                    <span>
+                      Ho letto e accetto la <a href="#" style="color:var(--c-amber); text-decoration:underline;">Privacy Policy</a>
+                      e acconsento al trattamento dei dati personali per ricevere risposta alla mia richiesta. *
+                    </span>
+                  </label>
+                </div>
+
+                <div id="form-feedback" class="hidden" style="margin-bottom:16px;"></div>
+
+                <button type="submit" id="btn-submit" class="btn-primary w-full justify-center" style="font-size:0.85rem; padding:16px;">
+                  Invia Richiesta di Preventivo
+                  <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+                </button>
+
+                <p style="font-size:0.75rem; color:#9ca3af; text-align:center; margin-top:12px;">
+                  I campi * sono obbligatori. I dati sono trattati ai sensi del Reg. UE 2016/679 (GDPR).
+                </p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 px-6 lg:px-12" style="background:#fff;">
+      <div class="max-w-3xl mx-auto" data-reveal>
+        <div class="text-center mb-12">
+          <div class="section-label mb-4" style="justify-content:center;">FAQ</div>
+          <h2 class="section-title">Domande frequenti.</h2>
+        </div>
+        <div class="flex flex-col gap-4">
+          <details style="background:var(--c-sand); border:1px solid var(--c-border); border-radius:4px; padding:20px 24px;" class="group cursor-pointer">
+            <summary style="font-weight:700; font-size:0.9rem; color:var(--c-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              Il sopralluogo è davvero gratuito?
+              <svg class="w-4 h-4 group-open:rotate-180 transition-transform" style="color:var(--c-muted); flex-shrink:0;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p style="font-size:0.875rem; color:var(--c-muted); margin-top:12px; line-height:1.75;">Sì, il sopralluogo è completamente gratuito e senza impegno. Uno dei nostri tecnici verrà a valutare il lavoro direttamente in loco, senza costi aggiuntivi.</p>
+          </details>
+          <details style="background:var(--c-sand); border:1px solid var(--c-border); border-radius:4px; padding:20px 24px;" class="group cursor-pointer">
+            <summary style="font-weight:700; font-size:0.9rem; color:var(--c-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              In quanto tempo ricevo il preventivo?
+              <svg class="w-4 h-4 group-open:rotate-180 transition-transform" style="color:var(--c-muted); flex-shrink:0;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p style="font-size:0.875rem; color:var(--c-muted); margin-top:12px; line-height:1.75;">Dopo il sopralluogo rilasciamo un preventivo dettagliato entro 48 ore lavorative. Il documento include voci di spesa, materiali, tempistiche e condizioni di pagamento.</p>
+          </details>
+          <details style="background:var(--c-sand); border:1px solid var(--c-border); border-radius:4px; padding:20px 24px;" class="group cursor-pointer">
+            <summary style="font-weight:700; font-size:0.9rem; color:var(--c-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              Posso usufruire del Superbonus o delle detrazioni fiscali?
+              <svg class="w-4 h-4 group-open:rotate-180 transition-transform" style="color:var(--c-muted); flex-shrink:0;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p style="font-size:0.875rem; color:var(--c-muted); margin-top:12px; line-height:1.75;">Sì. Forniamo tutta la documentazione necessaria per accedere alle detrazioni fiscali previste per ristrutturazioni (Bonus Casa 50%, Ecobonus). Valutiamo caso per caso durante il sopralluogo.</p>
+          </details>
+          <details style="background:var(--c-sand); border:1px solid var(--c-border); border-radius:4px; padding:20px 24px;" class="group cursor-pointer">
+            <summary style="font-weight:700; font-size:0.9rem; color:var(--c-dark); list-style:none; display:flex; justify-content:space-between; align-items:center;">
+              Operate anche fuori Roma?
+              <svg class="w-4 h-4 group-open:rotate-180 transition-transform" style="color:var(--c-muted); flex-shrink:0;" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </summary>
+            <p style="font-size:0.875rem; color:var(--c-muted); margin-top:12px; line-height:1.75;">Operiamo principalmente a Roma e in tutta la provincia (Pomezia, Ciampino, Fiumicino, Tivoli, Castelli Romani). Per lavori di una certa entità valutiamo anche zone limitrofe.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

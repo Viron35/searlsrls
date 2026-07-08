@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "titolo": "Ristrutturazione Completa — Appartamento Parioli",
+    "categoria": "Ristrutturazioni",
+    "descrizione_breve": "Ristrutturazione integrale di appartamento di 120 m² nel quartiere Parioli: impianti, finiture, bagni e cucina completamente rinnovati.",
+    "immagine_url": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80",
+    "link_progetto": "progetti/appartamento-parioli.html"
+  },
+  {
+    "id": 2,
+    "titolo": "Costruzione Villino — Zona EUR",
+    "categoria": "Nuove Costruzioni",
+    "descrizione_breve": "Realizzazione di villino bifamiliare di 280 m² su due livelli con garage interrato, classe energetica A2 e finiture di pregio.",
+    "immagine_url": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    "link_progetto": "progetti/villino-eur.html"
+  },
+  {
+    "id": 3,
+    "titolo": "Rifacimento Facciate — Condominio Tuscolana",
+    "categoria": "Esterni",
+    "descrizione_breve": "Risanamento e rifacimento facciate di edificio condominiale degli anni '70: intonaco, cappotto termico e tinteggiatura esterna.",
+    "immagine_url": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=800&q=80",
+    "link_progetto": "progetti/facciate-tuscolana.html"
+  },
+  {
+    "id": 4,
+    "titolo": "Ristrutturazione Uffici — Centro Storico",
+    "categoria": "Commerciale",
+    "descrizione_breve": "Trasformazione di spazio grezzo in suite di uffici moderni di 350 m² nel cuore di Roma: controsoffitti, impianti e finiture su misura.",
+    "immagine_url": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
+    "link_progetto": "progetti/uffici-centro-storico.html"
+  },
+  {
+    "id": 5,
+    "titolo": "Bagno & Cucina — Residenza Monteverde",
+    "categoria": "Finiture",
+    "descrizione_breve": "Rinnovo completo di bagni e cucina in abitazione privata: posa pavimenti, rivestimenti, sanitari e arredi su misura.",
+    "immagine_url": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=800&q=80",
+    "link_progetto": "progetti/bagno-cucina-monteverde.html"
+  },
+  {
+    "id": 6,
+    "titolo": "Capannone Industriale — Pomezia",
+    "categoria": "Nuove Costruzioni",
+    "descrizione_breve": "Costruzione ex novo di capannone industriale di 800 m² a Pomezia: struttura in acciaio, tamponamenti, uffici annessi e piazzale esterno.",
+    "immagine_url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80",
+    "link_progetto": "progetti/capannone-pomezia.html"
+  }
+]

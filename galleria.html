@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galleria lavori SE.AR.L. — Ristrutturazioni, nuove costruzioni e finiture a Roma e provincia." />
+  <title>Galleria Lavori — SE.AR.L. S.R.L.S</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script>tailwind.config={theme:{extend:{fontFamily:{display:['"Bebas Neue"','sans-serif'],body:['"DM Sans"','sans-serif']}}}}</script>
+  <link rel="stylesheet" href="css/shared.css" />
+  <style>
+    .filter-pill {
+      padding: 8px 20px; border-radius: 2px; font-size: 0.72rem; font-weight: 700;
+      border: 2px solid var(--c-border); color: var(--c-muted); background: #fff;
+      cursor: pointer; transition: all 0.2s; letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .filter-pill:hover { border-color: var(--c-amber); color: var(--c-amber); }
+    .filter-pill.active { background: var(--c-amber); border-color: var(--c-amber); color: #fff; }
+
+    .loader { display:flex; align-items:center; justify-content:center; padding:80px 0; grid-column:1/-1; }
+    .loader-spinner {
+      width:40px; height:40px; border:3px solid var(--c-border);
+      border-top-color:var(--c-amber); border-radius:50%;
+      animation:spin 0.7s linear infinite;
+    }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    #galleria-errore { display:none; grid-column:1/-1; text-align:center; padding:80px 20px; color:var(--c-muted); }
+  </style>
+</head>
+<body class="font-body">
+  <div id="navbar-placeholder"></div>
+
+  <!-- Barra navigazione contestuale -->
+  <div class="subnav">
+    <a href="index.html" class="subnav-back">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      Home
+    </a>
+    <div class="subnav-links">
+      <a href="index.html" class="subnav-link">Home</a>
+      <div class="subnav-sep"></div>
+      <a href="galleria.html" class="subnav-link active-sub">Lavori</a>
+      <div class="subnav-sep"></div>
+      <a href="contatti.html" class="subnav-link">Contatti</a>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="page-hero pt-28 pb-16 px-6 lg:px-12">
+      <div class="max-w-7xl mx-auto relative z-10">
+        <div class="max-w-2xl">
+          <div class="section-label mb-4" style="color:var(--c-amber);">Portfolio Cantieri</div>
+          <h1 style="font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,7vw,5.5rem); letter-spacing:0.04em; color:#fff; line-height:0.95; margin-bottom:20px;">
+            I Nostri<br />Lavori.
+          </h1>
+          <p style="color:rgba(255,255,255,0.5); font-size:1rem; line-height:1.75; max-width:480px;">
+            Una selezione dei cantieri completati a Roma e provincia. 
+            Ristrutturazioni, nuove costruzioni, finiture e opere commerciali.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERIA -->
+    <section class="py-20 px-6 lg:px-12" style="background:var(--c-sand);">
+      <div class="max-w-7xl mx-auto">
+        <!-- Filtri -->
+        <div class="flex flex-wrap gap-3 mb-12" id="filtri-galleria" data-reveal>
+          <button class="filter-pill active" data-categoria="tutti">Tutti</button>
+          <button class="filter-pill" data-categoria="Ristrutturazioni">Ristrutturazioni</button>
+          <button class="filter-pill" data-categoria="Nuove Costruzioni">Nuove Costruzioni</button>
+          <button class="filter-pill" data-categoria="Esterni">Esterni & Facciate</button>
+          <button class="filter-pill" data-categoria="Commerciale">Commerciale</button>
+          <button class="filter-pill" data-categoria="Finiture">Finiture</button>
+        </div>
+
+        <!-- Grid -->
+        <div id="galleria-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div id="galleria-loader" class="loader" style="grid-column:1/-1;">
+            <div class="loader-spinner"></div>
+          </div>
+          <div id="galleria-errore">
+            <svg class="w-16 h-16 mx-auto mb-4" style="color:var(--c-border);" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+            <p style="font-size:1rem; font-weight:600; margin-bottom:8px;">Impossibile caricare i lavori</p>
+            <p style="font-size:0.85rem;">Apri il sito da un server HTTP (es. GitHub Pages o <code>python3 -m http.server</code>).</p>
+          </div>
+        </div>
+
+        <div id="risultati-count" class="mt-8 text-center hidden" style="font-size:0.82rem; color:var(--c-muted); letter-spacing:0.06em; text-transform:uppercase; font-weight:600;"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 px-6 lg:px-12" style="background:#fff;">
+      <div class="max-w-3xl mx-auto text-center" data-reveal>
+        <h2 class="section-title mb-4">Vuoi un lavoro come questi?</h2>
+        <p style="color:var(--c-muted); font-size:1rem; line-height:1.75; margin-bottom:32px;">
+          Contattaci per un sopralluogo gratuito. Valutiamo insieme il tuo progetto 
+          e ti forniamo un preventivo dettagliato entro 48 ore.
+        </p>
+        <a href="contatti.html" class="btn-primary">
+          Richiedi Sopralluogo Gratuito
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
