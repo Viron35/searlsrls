@@ -29,19 +29,16 @@
     }
     .form-card {
       background:#fff; border:1px solid var(--c-border); border-radius:4px;
-      padding:16px; box-shadow:0 4px 30px rgba(0,0,0,0.05);
+      padding:40px; box-shadow:0 4px 30px rgba(0,0,0,0.05);
     }
-    @media(min-width:640px){ .form-card { padding:28px; } }
-    @media(min-width:1024px){ .form-card { padding:40px; } }
-    .form-group { margin-bottom:14px; }
-    @media(min-width:640px){ .form-group { margin-bottom:20px; } }
+    .form-group { margin-bottom:20px; }
     label {
       display:block; font-size:0.72rem; font-weight:700; color:var(--c-dark);
       margin-bottom:6px; letter-spacing:0.1em; text-transform:uppercase;
     }
     .form-input {
       width:100%; padding:12px 16px; border:2px solid var(--c-border); border-radius:3px;
-      font-family:'DM Sans',sans-serif; font-size:1rem; color:var(--c-dark);
+      font-family:'DM Sans',sans-serif; font-size:0.9rem; color:var(--c-dark);
       background:#fff; transition:border-color 0.2s, box-shadow 0.2s; outline:none; appearance:none;
     }
     .form-input:focus { border-color:var(--c-amber); box-shadow:0 0 0 3px rgba(217,119,6,0.1); }
@@ -68,7 +65,7 @@
     }
   </style>
 </head>
-<body class="font-body" style="overflow-x:hidden;">
+<body class="font-body">
   <div id="navbar-placeholder"></div>
 
   <!-- Barra navigazione contestuale -->
@@ -88,7 +85,7 @@
 
   <main>
     <!-- HERO -->
-    <section class="page-hero pt-24 pb-10 px-4 sm:px-6 lg:px-12">
+    <section class="page-hero pt-28 pb-16 px-6 lg:px-12">
       <div class="max-w-7xl mx-auto relative z-10">
         <div class="max-w-2xl">
           <div class="section-label mb-4" style="color:var(--c-amber);">Contatti & Preventivi</div>
@@ -104,12 +101,12 @@
     </section>
 
     <!-- CONTATTI + FORM -->
-    <section class="py-12 px-4 sm:px-6 lg:px-12" style="background:var(--c-sand);">
+    <section class="py-20 px-6 lg:px-12" style="background:var(--c-sand);">
       <div class="max-w-7xl mx-auto">
-        <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
 
           <!-- Colonna sinistra -->
-          <div class="lg:col-span-2 flex flex-col gap-4" data-reveal>
+          <div class="lg:col-span-2 flex flex-col gap-5" data-reveal>
             <div>
               <div class="section-label mb-3">Come contattarci</div>
               <h2 class="section-title mb-3" style="font-size:2rem;">Siamo a Roma,<br />sempre reperibili.</h2>
@@ -141,9 +138,9 @@
               <div>
                 <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-muted); margin-bottom:4px;">Sede Operativa</div>
                 <!-- ← INSERISCI INDIRIZZO -->
-                <p style="font-weight:700; font-size:0.9rem; color:var(--c-dark);">Via [da inserire]</p>
-                <p style="font-size:0.85rem; color:var(--c-muted);">Roma (RM)</p>
-                <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">P.IVA: [da inserire]</p>
+                <p style="font-weight:700; font-size:0.9rem; color:var(--c-dark);">Via Palombarese 542</p>
+                <p style="font-size:0.85rem; color:var(--c-muted);">Fonte Nuova (RM)</p>
+                <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">P.IVA: 16495271005</p>
               </div>
             </div>
 
@@ -153,7 +150,7 @@
               <div>
                 <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-muted); margin-bottom:4px;">Telefono & WhatsApp</div>
                 <!-- ← INSERISCI TELEFONO -->
-                <a href="tel:+39XXXXXXXXXX" style="font-weight:700; font-size:0.9rem; color:var(--c-dark); text-decoration:none;">+39 [da inserire]</a>
+                <a href="tel:+393479544980" style="font-weight:700; font-size:0.9rem; color:var(--c-dark); text-decoration:none;">+39 3479544980</a>
                 <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">Lun–Sab, 8:00–18:00</p>
               </div>
             </div>
@@ -164,19 +161,20 @@
               <div>
                 <div style="font-size:0.65rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--c-muted); margin-bottom:4px;">Email</div>
                 <!-- ← INSERISCI EMAIL -->
-                <a href="mailto:info@searl.it" style="font-weight:700; font-size:0.9rem; color:var(--c-dark); text-decoration:none;">info@[da inserire]</a>
+                <a href="artandaiu25@gmail.com" style="font-weight:700; font-size:0.9rem; color:var(--c-dark); text-decoration:none;">artandaiu25@gmail.com</a>
                 <p style="font-size:0.75rem; color:#9ca3af; margin-top:2px;">Risposta entro 24h</p>
               </div>
             </div>
 
             <!-- Orari -->
-            <div class="hidden sm:block" style="background:#fff; border-radius:4px; padding:24px; border:1px solid var(--c-border);">
+            <div style="background:#fff; border-radius:4px; padding:24px; border:1px solid var(--c-border);">
               <h4 style="font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:0.04em; color:var(--c-dark); margin-bottom:16px;">Orari di Disponibilità</h4>
               <div class="orario-row"><span style="font-size:0.875rem; color:var(--c-muted);">Lunedì – Venerdì</span><span style="font-size:0.875rem; font-weight:700; color:var(--c-amber);">08:00 – 18:00</span></div>
               <div class="orario-row"><span style="font-size:0.875rem; color:var(--c-muted);">Sabato</span><span style="font-size:0.875rem; font-weight:700; color:var(--c-amber);">08:00 – 13:00</span></div>
               <div class="orario-row"><span style="font-size:0.875rem; color:var(--c-muted);">Domenica</span><span style="font-size:0.875rem; color:#9ca3af;">Chiuso</span></div>
             </div>
 
+            
           </div>
 
           <!-- Form -->
@@ -304,7 +302,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="py-12 px-4 sm:px-6 lg:px-12" style="background:#fff;">
+    <section class="py-20 px-6 lg:px-12" style="background:#fff;">
       <div class="max-w-3xl mx-auto" data-reveal>
         <div class="text-center mb-12">
           <div class="section-label mb-4" style="justify-content:center;">FAQ</div>
